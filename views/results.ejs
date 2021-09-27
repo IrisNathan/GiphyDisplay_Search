@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<!-- add search again feature so user doesn't have to go to home page-->
+
+<div class="container my-4 text-center">
+  <form action="/search">
+  <!-- name attrb gets user input / value attrb empty str to clear search bar-->
+    <input type="search" placeholder="Search Giphy!" name="searchGiphy" value="">
+    <button class="btn btn-dark">Search</button>
+  </form>
+</div>
+
+<div class="giphy">
+  <% data.forEach(gif => { %>
+  <!-- display data to page -->
+    <img src="<%=gif.images.fixed_height.url%>" alt="<%=gif.title%>">
+    <% }) %>
+  </div>
+
+<%- include('partials/footer') %>

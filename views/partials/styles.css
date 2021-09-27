@@ -1,0 +1,17 @@
+input {
+  width: 30%;
+  line-height: 2.5;
+}
+
+nav {
+  margin-bottom: 50px;
+  padding: 40px;
+}
+.giphy {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-right: 110px;
+  padding-left: 110px;
+  padding-bottom: 110px;
+}

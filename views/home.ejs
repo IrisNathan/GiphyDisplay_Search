@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<!-- search bar -->
+<div class="container my-4 text-center">
+  <form action="/search">
+    <!-- name attrb gets user input / value attrb empty str to clear search bar-->
+    <input type="search" placeholder="search giphy" name="searchGiphy" value=""> 
+    <button class="btn btn-dark">Search</button>
+  </form>
+</div>
+
+<!-- iterate thru data to display trending -->
+<div class="giphy">
+  <% data.forEach(el => { %>
+  <!-- display data to page -->
+    <img src="<%=el.images.fixed_height.url%>" alt="<%=el.title%>">
+    <% }) %>
+  </div>
+  
+
+<%- include('partials/footer') %>
+
